@@ -18,3 +18,8 @@
 # Features
 - User authentication
 - Create new user
+- Search for accommodation
+- Select your travel date
+- Photo gallery with zoom gesture
+- Data filling form
+- Payment method Credit card or Pix
