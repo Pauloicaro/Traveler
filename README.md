@@ -2,6 +2,15 @@
 # Traveler
 # Stack
 
-- React native
+- React Native
 - Typescript
+- React Navigation
+- Firebase Authentication
+- Async Storage
+- React Native Reanimated
+- React native Gesture Handler
+- React Native Calendars docs
+- React Native Svg
+- Expo Linear Gradient
+- Expo blur
 
