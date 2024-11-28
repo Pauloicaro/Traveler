@@ -46,8 +46,6 @@ const Login = () => {
     }, [isFocus])
 
 
-
-
     function HandleLogin() {
         Focus.current.focus()
         signInWithEmailAndPassword(auth, email, password)
@@ -63,9 +61,7 @@ const Login = () => {
                 }
                 console.log(err)
             })
-
     }
-
 
 
     if (loading) {
@@ -74,7 +70,6 @@ const Login = () => {
         </View>)
     }
 
-
     if (user) {
         <View style={{ flex: 1 }}>
             <Home />
@@ -82,9 +77,7 @@ const Login = () => {
     }
 
 
-
     return (
-
         <SafeAreaView style={styles.container}>
             <View style={styles.content}>
                 <Animation.View style={styles.contentimg}
@@ -136,7 +129,6 @@ const Login = () => {
                             onBlur={() => setOnblur2(false)}
                             onFocus={() => setOnblur2(true)}
                         />
-
 
                         <TouchableOpacity onPress={() => setEyes(!eyes)} style={{ right: 66 }}>
                             {eyes ? (

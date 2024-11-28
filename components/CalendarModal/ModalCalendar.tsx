@@ -5,7 +5,6 @@ import { StyleModal } from './StylesCalendarModal'
 import { Calendar, DateData, LocaleConfig } from 'react-native-calendars';
 
 
-
 type ModalProps = {
     Visible: () => void,
     day: DateData | undefined,
@@ -66,9 +65,7 @@ const ModalCalendar = ({ Visible, day, setDay }: ModalProps) => {
     return (
         <View style={{ flex: 1, backgroundColor: "rgba(34, 34, 34, 0.4)" }}>
 
-            <TouchableOpacity onPress={() => Visible()} style={{ flex: 1 }}>
-            </TouchableOpacity>
-
+            <TouchableOpacity onPress={() => Visible()} style={{ flex: 1 }} />
 
             <View style={StyleModal.containerModal}>
                 <Calendar style={StyleModal.calendar}
@@ -85,14 +82,11 @@ const ModalCalendar = ({ Visible, day, setDay }: ModalProps) => {
                         arrowColor: 'red',
                         textDayStyle: { color: 'black' },
                         textDisabledColor: '#DCDCDC',
-
                     }}
 
                     onDayPress={setDay}
                     markedDates={day && {
-                        [day.dateString]: { selected: true, },
-
-                    }}
+                        [day.dateString]: { selected: true, } }}
 
                     minDate={new Date().toDateString()}
                     hideExtraDays={true}

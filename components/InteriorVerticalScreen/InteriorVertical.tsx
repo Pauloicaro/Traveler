@@ -40,7 +40,6 @@ export default function InteriorsVertical() {
         { scale: withTiming(-presseb.value ? 1.4 : 1.1) }],
     }));
 
-
     useEffect(() => {
         offset.value = withRepeat(
             withTiming(-offset.value, { duration: time.value - 100, }),
@@ -48,8 +47,6 @@ export default function InteriorsVertical() {
             true
         );
     }, []);
-
-
 
     return (
         <GestureHandlerRootView style={styles.GestureHandlercontainer}>
@@ -67,7 +64,6 @@ export default function InteriorsVertical() {
                 <StatusBar backgroundColor={'#000000'} />
             </View>
             </SafeAreaView>
-
         </GestureHandlerRootView>
     );
 

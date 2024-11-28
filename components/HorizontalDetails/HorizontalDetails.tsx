@@ -44,7 +44,6 @@ export const HorizontalDetails = () => {
     }
 
 
-
     return (
         <LinearGradient
             colors={['#fff',
@@ -74,22 +73,17 @@ export const HorizontalDetails = () => {
                                 </View>
                             </View>
                         </BlurView>
-
                         <Pressable style={styles.doubleleft} onPress={() => Navigation.navigate('Home')}>
                             <FontAwesome5 name="angle-double-left" size={40} color="#fff" />
                         </Pressable>
-
                         <View style={styles.containerLocation}>
                             <Text style={styles.textLocation}>{item.Location} </Text>
                             <MaterialIcons name="share-location" size={26} color="red" />
                         </View>
                     </Animation.View>
-
-
                     <View style={styles.DescriptionContainer}>
                         <Text style={styles.textInfo}>{item.Details} </Text>
                     </View>
-
                     <View>
                         <Svg height={20} width={'100%'} >
                             <Line x1={"0%"}
@@ -165,7 +159,6 @@ export const HorizontalDetails = () => {
                             </TouchableOpacity>
                         </View>
                     </View>
-
                     < StatusBar backgroundColor={'#20212411'} />
                 </View>
             </SafeAreaView>

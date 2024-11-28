@@ -9,7 +9,6 @@ type CalendarType = {
     setLoading: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-
 export const UiContext = createContext<CalendarType>({
     days: undefined,
     setDays: function (value: React.SetStateAction<undefined>): void { },
@@ -22,7 +21,6 @@ export default function UiContextProvider({ children }: PropsWithChildren) {
 
     const [days, setDays] = useState()
     const [loading, setLoading] = useState(false)
-
 
     return (<UiContext.Provider value={{ days, setDays, loading, setLoading, }}>
         {children}

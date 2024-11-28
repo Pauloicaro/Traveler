@@ -9,7 +9,6 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Animation, { FadeInRight } from 'react-native-reanimated'
 
-
 type CardType = {
     item: HouseProps
 }
@@ -74,8 +73,6 @@ const Card = ({ item }: CardType) => {
     }, [])
 
 
-
-
     const count = [0, 1]
     const Cards = useSharedValue(count[0])
 
@@ -113,30 +110,24 @@ const Card = ({ item }: CardType) => {
         Cards.value = count[0]
     }
 
-
-
     return (
         <>
             <Animation.View style={styles.container} entering={FadeInRight}>
                 <View style={styles.contenTtitle}>
                     <Text style={styles.title}>Forma de pagamento</Text>
                 </View>
-
                 <View style={styles.payContent}>
                     <TouchableOpacity onPress={() => setRandom(false)}
                         style={[styles.containerPay, { backgroundColor: random ? "#fff" : "#6A5ACD" }]}>
                         <Text style={[styles.payTitle, { color: random ? "#000000" : "#fff" }]}>Cartão</Text>
                         <FontAwesome name="credit-card" size={25} color={random ? "#4682B4" : "#fff"} />
                     </TouchableOpacity>
-
-
                     <TouchableOpacity onPress={() => setRandom(!false)}
                         style={[styles.containerPay, { backgroundColor: random ? "#6A5ACD" : "#fff" }]}>
                         <Text style={[styles.payTitle, { color: random ? "#fff" : "#000000" }]}>Pix</Text>
                         <FontAwesome6 name="pix" size={25} color={random ? "#fff" : "#4682B4"} />
                     </TouchableOpacity>
                 </View>
-
                 {!random ? (
                     <>
                         <Animated.View style={[styles.FrontcontentCard, Front]} >
@@ -149,7 +140,6 @@ const Card = ({ item }: CardType) => {
                                     <Image source={require('../../src/imgs/Logo/card.png')} style={styles.ImgCard} />
                                 </View>
                             </View>
-
                             <View style={styles.containerImgChip}>
                                 <Image source={require('../../src/imgs/Logo/chip.png')} style={styles.ImgChip} />
                             </View>

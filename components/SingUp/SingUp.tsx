@@ -13,12 +13,10 @@ import { UiContext } from '../Context/ContextApi'
 import Animation, { FadeIn, FadeInRight } from 'react-native-reanimated';
 
 
-
 const SingUp = () => {
 
     const { loading, setLoading } = useContext(UiContext)
     const Navigation = useNavigation<StackTypes>()
-
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -27,7 +25,6 @@ const SingUp = () => {
     const [onblur, setOnblur] = useState(false)
     const [onblur2, setOnblur2] = useState(false)
     const [onblur3, setOnblur3] = useState(false)
-
 
 
     function HandleSingUp() {
@@ -47,7 +44,6 @@ const SingUp = () => {
                 }
                 console.log(err)
             })
-
     }
 
 
@@ -56,8 +52,6 @@ const SingUp = () => {
             <ActivityIndicator size={45} color={"#A9A9A9"} />
         </View>)
     }
-
-
 
     return (
         <SafeAreaView style={styles.container}>
@@ -69,8 +63,6 @@ const SingUp = () => {
                             style={styles.img} />
                     </View>
                 </Animation.View>
-
-
                 <View style={styles.contentInput}>
                     <Animation.View
                         style={[styles.containerInput,
@@ -92,7 +84,6 @@ const SingUp = () => {
                             onFocus={() => setOnblur(true)}
                         />
                     </Animation.View>
-
                     <Animation.View style={[styles.containerInput,
                     onblur2 && { borderBottomWidth: 1.5, borderColor: email.length > 5 ? "blue" : "red" }]}
                         entering={FadeInRight.duration(400)}>
@@ -112,7 +103,6 @@ const SingUp = () => {
                             onFocus={() => setOnblur2(true)}
                         />
                     </Animation.View>
-
                     <Animation.View
                         style={[styles.containerInput,
                         onblur3 && { borderBottomWidth: 1.5, borderColor: password.length > 4 ? "blue" : "red" }]}
@@ -132,7 +122,6 @@ const SingUp = () => {
                             onBlur={() => setOnblur3(false)}
                             onFocus={() => setOnblur3(true)}
                         />
-
 
                         <TouchableOpacity onPress={() => setEyes(!eyes)}>
                             {eyes ? (
@@ -155,7 +144,6 @@ const SingUp = () => {
                         </TouchableOpacity>
                     )}
 
-
                     <View style={styles.containerContent}>
                         <View>
                             <Text style={styles.title}>Já tem uma conta? </Text>
@@ -165,7 +153,6 @@ const SingUp = () => {
                         </TouchableOpacity>
                     </View>
                 </View>
-
             </View>
         </SafeAreaView>
 

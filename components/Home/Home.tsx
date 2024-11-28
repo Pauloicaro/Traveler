@@ -23,13 +23,11 @@ import { VerticalProps, data } from '../../content/DataVertical'
 import { Houses, HouseProps } from '../../content/Data'
 
 
-
 function Home() {
 
   const Navigation = useNavigation<StackTypes>()
   const [house] = useState<HouseProps[]>(Houses)
   const [verticalDate] = useState<VerticalProps[]>(data)
-
 
   function HandlesignOut() {
     signOut(auth).then((response) => {
@@ -44,9 +42,7 @@ function Home() {
   }
 
 
-
   return (
-
     <SafeAreaView style={Styles.container}>
       <View style={Styles.content}>
         <Animation.View style={Styles.containerSearch}
@@ -55,21 +51,17 @@ function Home() {
             <TouchableOpacity onPress={HandlesignOut} style={{ right: 11 }}>
               <AntDesign name="arrowleft" size={29} color="black" />
             </TouchableOpacity>
-
             <Pressable onPress={HandChangeInput} >
               <View style={Styles.containerInput}>
                 <MaterialCommunityIcons name="map-search-outline" size={29} color="red" />
                 <Text style={Styles.titleHospedagem}>Buscar, hospedagem</Text>
               </View>
             </Pressable>
-
           </View>
         </Animation.View>
-
         <View style={Styles.textContent}>
           <Text style={Styles.textPrincipal}>Preferido dos hóspedes</Text>
         </View>
-
         <FlatList
           keyExtractor={(item) => String(item.id)}
           data={house}
@@ -78,13 +70,9 @@ function Home() {
             return <HorizontalItem item={item} index={index} />
           }}
           showsHorizontalScrollIndicator={false} />
-
         <View style={Styles.contentTextSecundário}>
           <Text style={Styles.textSecundário}> Outros destinos incrível</Text>
         </View>
-
-
-
         <View style={Styles.VerticalContent}>
           <FlatList
             showsVerticalScrollIndicator={false}

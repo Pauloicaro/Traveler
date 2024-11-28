@@ -23,7 +23,6 @@ const ReserveInput = () => {
                 <View style={styles.content}>
                     <Text style={styles.title}>Informação pessoal </Text>
                     <View style={styles.line} />
-
                     <View>
                         <Text style={[styles.subTitle, onfocus && { color: '#00008B' }]}>Nome</Text>
                     </View>
@@ -41,17 +40,13 @@ const ReserveInput = () => {
                                 maxLength={18}
                             />
                         </View>
-
-
                         {nome.length > 4 && (
                             <AntDesign name="check" size={27} color="green" />
                         )}
                     </View>
-
                     <View>
                         <Text style={[styles.subTitle, onfocus2 && { color: '#00008B' }]}>Sobrenome</Text>
                     </View>
-
                     <View style={styles.contentInput}>
                         <View style={[styles.containerInput, onfocus2 && styles.inputFocus]}>
                             <TextInput
@@ -74,8 +69,6 @@ const ReserveInput = () => {
                     <View>
                         <Text style={[styles.subTitle, onfocus3 && { color: '#00008B' }]}>Endereço de e-mail</Text>
                     </View>
-
-
                     <View style={styles.contentInput}>
                         <View style={[styles.containerInput, onfocus3 && styles.inputFocus]}>
                             <TextInput
@@ -88,7 +81,6 @@ const ReserveInput = () => {
                                 onFocus={() => setOnfocus3(true)}
                             />
                         </View>
-
                         {email.length > 4 && (
                             <AntDesign name="check" size={27} color="green" />
                         )}

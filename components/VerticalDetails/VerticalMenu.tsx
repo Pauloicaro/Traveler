@@ -71,22 +71,17 @@ export const VerticalMenu = () => {
                                 </View>
                             </View>
                         </BlurView>
-
                         <Pressable style={styles.doubleleft} onPress={() => Navigation.navigate('Home')}>
                             <FontAwesome5 name="angle-double-left" size={40} color="#fff" />
                         </Pressable>
-
                         <View style={styles.containerLocation}>
                             <Text style={styles.textLocation}>{item.Location} </Text>
                             <MaterialIcons name="share-location" size={26} color="red" />
                         </View>
                     </Animation.View>
-
-
                     <View style={styles.DescriptionContainer}>
                         <Text style={styles.textInfo}>{item.Details} </Text>
                     </View>
-
                     <View>
                         <Svg height={20} width={'100%'} >
                             <Line x1={"0%"}
@@ -100,36 +95,30 @@ export const VerticalMenu = () => {
                             <Circle r={8} cy={"50%"} cx={"100%"} fill={'#000000'} />
                         </Svg>
                     </View>
-
                     <LinearGradient style={styles.containerIcons}
                         colors={['#fff', '#fff', '#1C1C1C']} start={{ x: 0.6, y: 0.9 }}>
                         <View style={styles.contentIcons}>
                             <Fontisto name="wifi-logo" size={22} color="#FF0000" />
                             <Text style={styles.textIcon}>Internet</Text>
                         </View>
-
                         <View style={styles.contentIcons}>
                             <MaterialIcons name="coffee" size={26} color="#FF0000" />
                             <Text style={styles.textIcon}>Café</Text>
                         </View>
-
                         <View style={styles.contentIcons}>
                             <Ionicons name="bed" size={26} color="#FF0000" />
                             <Text style={styles.textIcon}>Quartos</Text>
                         </View>
-
                         <View style={styles.container2}>
                             <View style={styles.containerNumber}>
                                 <Text style={styles.number}>{item.number} </Text>
                             </View>
-
                             <View style={{ justifyContent: 'center' }}>
                                 <Text style={styles.validation2}>{item.avaliação} </Text>
                                 <Text style={styles.validation}>{item.like} </Text>
                             </View>
                         </View>
                     </LinearGradient>
-
                     <FlatList
                         showsHorizontalScrollIndicator={false}
                         data={item.interiors}
@@ -146,13 +135,11 @@ export const VerticalMenu = () => {
                                 <Text style={styles.priceTitle}>{item.price} </Text>
                                 <Text style={styles.price}>{item.titlePrice} </Text>
                             </View>
-
                             <ModalHook Visible={() => setModalVisible(true)} day={days} />
                             <Modal visible={modalVisible} animationType='slide' transparent={true}>
                                 <ModalCalendar Visible={() => setModalVisible(false)} day={days} setDay={setDays} />
                             </Modal>
                         </View>
-
                         <View>
                             <TouchableOpacity style={styles.ContainerReserver}
                                 activeOpacity={0.5}
@@ -162,7 +149,6 @@ export const VerticalMenu = () => {
                             </TouchableOpacity>
                         </View>
                     </View>
-
                     < StatusBar backgroundColor={'#20212411'} />
                 </View>
             </SafeAreaView>

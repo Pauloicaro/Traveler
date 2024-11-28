@@ -36,7 +36,6 @@ export default function HorizontalItem({ item, index }: Props) {
                 </TouchableOpacity>
             </SafeAreaView>
         </Animation.View>
-
     );
 }
 

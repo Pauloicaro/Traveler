@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     content: {
         flex: 1,
         alignItems: 'center',
+        
     },
 
 
@@ -18,15 +19,15 @@ export const styles = StyleSheet.create({
         backgroundColor: '#363636',
         width: '100%',
         height: 100,
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
+        borderBottomLeftRadius: 25,
+        borderBottomRightRadius: 25,
         elevation: 16,
         paddingHorizontal: 10,
         alignItems: 'center',
-        borderBottomWidth: 1.6,
-        borderRightWidth: 1.6,
-        borderLeftWidth: 1.6,
         flexDirection: 'row',
+        borderBottomWidth: 0.8,
+        borderRightWidth: 0.1,
+        borderLeftWidth: 0.1,
 
     },
 
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create({
         bottom: -28,
         left: 25,
         elevation: 22,
-        borderWidth: 2
+        borderWidth: 1.1
     },
 
 

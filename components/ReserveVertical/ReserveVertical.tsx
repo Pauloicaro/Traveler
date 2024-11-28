@@ -20,34 +20,29 @@ const ReserveVertical = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <View style={styles.content}>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <View style={styles.containerReserve}>
+                        <Animation.View style={styles.containerImg} entering={FadeInRight}>
+                            <Image source={item.image} style={styles.img} />
+                        </Animation.View>
 
-        <View style={styles.content}>
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={styles.containerReserve}>
-                    <Animation.View style={styles.containerImg} entering={FadeInRight}>
-                        <Image source={item.image} style={styles.img} />
+                        <Animation.View style={{ top: 15 }} entering={FadeInRight}>
+                            <Text style={styles.title}>{item.title} </Text>
+                            <Text style={styles.location2}>{item.location2} </Text>
+                        </Animation.View>
+                    </View>
+                    <View style={styles.line3} />
+                    <Animation.View style={styles.contentDay} entering={FadeInRight}>
+                        <Text style={styles.titleDatas}>Datas</Text>
+                        <Text style={styles.tittleDay}>{days?.dateString ? days?.dateString : date} </Text>
                     </Animation.View>
-
-                    <Animation.View style={{ top: 15 }} entering={FadeInRight}>
-                        <Text style={styles.title}>{item.title} </Text>
-                        <Text style={styles.location2}>{item.location2} </Text>
-                    </Animation.View>
-                </View>
-
-                <View style={styles.line3} />
-
-                <Animation.View style={styles.contentDay} entering={FadeInRight}>
-                    <Text style={styles.titleDatas}>Datas</Text>
-                    <Text style={styles.tittleDay}>{days?.dateString ? days?.dateString : date} </Text>
-                </Animation.View>
-
-                <View style={styles.line} />
-
-                <ReserveInput />
-                <Card item={item} />
-            </ScrollView>
-        </View>
-                </SafeAreaView>
+                    <View style={styles.line} />
+                    <ReserveInput />
+                    <Card item={item} />
+                </ScrollView>
+            </View>
+        </SafeAreaView>
 
     )
 }

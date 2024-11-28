@@ -6,7 +6,6 @@ import UiContextProvider from './components/Context/ContextApi';
 
 
 
-
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>

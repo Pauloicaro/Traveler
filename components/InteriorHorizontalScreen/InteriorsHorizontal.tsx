@@ -16,8 +16,6 @@ import {
 } from 'react-native-gesture-handler';
 import { styles } from './Horizontal'
 
-
-
 type DetailsRoutesProps = RouteProp<RootStackParamList, 'InteriorsHorizontal'>
 
 export default function InteriorsHorizontal() {
@@ -68,7 +66,6 @@ export default function InteriorsHorizontal() {
                     <StatusBar backgroundColor={'#000000'} />
                 </View>
             </SafeAreaView>
-
         </GestureHandlerRootView>
     );
 
