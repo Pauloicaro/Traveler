@@ -14,3 +14,5 @@
 - Expo Linear Gradient
 - Expo Blur
 # 
+
+# Features
