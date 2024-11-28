@@ -8,9 +8,9 @@
 - Firebase Authentication
 - Async Storage
 - React Native Reanimated
-- React native Gesture Handler
+- React Native Gesture Handler
 - React Native Calendars docs
 - React Native Svg
 - Expo Linear Gradient
-- Expo blur
+- Expo Blur
 
