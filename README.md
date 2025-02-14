@@ -15,11 +15,11 @@
 - Expo Blur
 # 
 
-# Features
-- User authentication
-- Create new user
-- Search for accommodation
-- Select your travel date
-- Photo gallery with zoom gesture
-- Data filling form
-- Payment method Credit card or Pix
+# Características
+- Autenticação de usuário
+- Criar novo usuário
+- Procurar hospedagem
+- Selecionar a data da sua viagem
+- Galeria de fotos com gesto de zoom
+- Formulário de preenchimento de dados
+- Forma de pagamento Cartão de crédito ou Pix
